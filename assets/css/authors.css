@@ -1,0 +1,108 @@
+:root {
+    --color-author-title: #060606;
+    --color-author-paragraph: #424242;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 60px;
+}
+
+.authors-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.authors-container .authors-title .authors-title-text {
+    color: var(--color-author-title);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    min-height: 52px;
+}
+
+.authors-container .authors-title .authors-title-body {
+    color: var(--color-author-paragraph);
+    font-size: 24px;
+    line-height: 39px;
+    min-height: 95px;
+}
+
+.authors-container .card-container {
+    display: grid;
+    margin-top: 37px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-evenly;
+}
+
+.authors-container .card-container .author-card {
+    margin-bottom: 66px;
+}
+
+.authors-container .card-container .author-card .author-image-file {
+    width: 278px;
+    height: 278px;
+}
+
+.authors-container .card-container .author-card .linkedin-icon-file {
+    width: 32px;
+    height: 32px;
+}
+
+.authors-container .card-container .author-card .author-card-body .author-name {
+    color: var(--color-author-title);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    min-height: 44px;
+}
+
+.authors-container .card-container .author-card .author-card-body .author-occupation {
+    color: var(--color-author-paragraph);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 39px;
+    min-height: 48px;
+}
+
+/* @media screen and (max-width: 1330px) {
+    .authors-container .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+@media (max-width:1330px) and (min-width:982px) {
+    .authors-container .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .authors-container .card-container {
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (max-width:980px) and (min-width:676px) {
+    .authors-container .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .authors-container .card-container {
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (max-width:686px) {
+    .authors-container .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
